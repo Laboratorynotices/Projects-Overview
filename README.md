@@ -1,24 +1,7 @@
-# overview
+# Vue.js + Tailwind.css. Список проектов.
 
-## Project setup
-```
-npm install
-```
+Страница пишется в учебных целях для освоения [**Tailwind.css**](https://tailwindcss.com/) и [**Vue.js**](https://vuejs.org/) на практике. Данные будут храниться в коде, не планируется связь с базой данных или же другой CMS.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Отображение должно состоять из двух частей. В первой части будут отображаться технологи, а во второй части проекты с упоминанием этих проектов.
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[В моём блоге](https://laboratorynotices.wordpress.com/2022/08/25/%d1%81%d0%bf%d0%b8%d1%81%d0%be%d0%ba-%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%d0%be%d0%b2-%d0%bd%d0%b0-tailwind-css-vue-js-%d1%87%d0%b0%d1%81%d1%82%d1%8c-0/) пишу комментарии к коду, а так же описываю сам процесс разработки.
