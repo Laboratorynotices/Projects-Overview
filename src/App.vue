@@ -1,8 +1,6 @@
 <template>
-
-  {{ technologies }}
-  
   <img alt="Vue logo" src="./assets/logo.png">
+  <TechnologiesSection :technologies="technologies"/>
   <ProjectsSection :projects="projects" />
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
@@ -10,6 +8,7 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import ProjectsSection from './components/ProjectsSection.vue'
+import TechnologiesSection from './components/TechnologiesSection.vue'
 
 const projects =
   [
