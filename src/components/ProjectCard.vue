@@ -1,4 +1,8 @@
 <script setup>
+    import ProjectCardHeader    from '@/components/ProjectCardHeader.vue'
+    import ProjectCardMain      from '@/components/ProjectCardMain.vue'
+    import ProjectCardFooter    from '@/components/ProjectCardFooter.vue'
+
     defineProps({
         project: Object
     })
@@ -6,24 +10,17 @@
 
 <template>
     <!-- Карточка для отображения проекта -->
-    <article class="my-2 rounded-lg shadow-lg bg-white flex flex-col">
+    <article class="my-2 rounded-3xl shadow-lg bg-white flex flex-col">
         <!-- Заголовок карточки -->
-        <header>
-            <h1
-                class="text-3xl font-bold border-b border-gray-300">
-                {{ project.name }}
-            </h1>
-        </header>
+        <ProjectCardHeader :title="project.name" />
 
         <!-- Описание проекта -->
-        <div class="h-fit">
-            <p>{{ project.description }}</p>
-        </div>
+        <ProjectCardMain :text="project.description" />
 
         <!-- Подвал карточки -->
-        <footer class="border-t border-gray-300  mt-auto">
-            <a :href="project.url" target="_blank">Open</a>
-            {{ project.technologies }}
-        </footer>
+        <ProjectCardFooter
+            :url="project.url"
+            :technologies="project.technologies"
+        />
     </article>
 </template>
