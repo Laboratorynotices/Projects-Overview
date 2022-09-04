@@ -16,6 +16,7 @@
                 v-for="(technology, index) in technologies"
                 :key="index"
                 :technology="technology"
+                mode="TechnologiesSection"
             />
 
         </div>

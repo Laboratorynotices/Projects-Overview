@@ -1,16 +1,31 @@
 <script setup>
-    defineProps({
-        technology: String
-    })
+    import { computed } from "vue";
+
+    // Получаем данные от "родительского" элемента.
+    const props = defineProps({
+        technology: String,
+        mode: {
+            type: String,
+            default: "TechnologiesSection"
+        }
+    });
+
+    // В зависимости от "родительского" элемента выбираем набор классов.
+    const divClass = computed(() => 
+        ((props.mode == 'TechnologiesSection') ?
+            'rounded-full my-2 border-4 border-blue-700 shadow-xl' :
+            'w-6 first:mr-5')
+    );
+
 </script>
 
 <template>
     <!-- Логотипы технологий должны быть .svg-формата и иметь такое же имя, которое у технологии -->
-    <!-- Рамка и тень вокруг логотипов -->
-    <div class="my-2 rounded-full border-4 ring-offset-current border-blue-700 shadow-xl">
+    <!-- Обёртка вокруг отдельного логотипа -->
+    <div :class="divClass" >
         <!-- Отображение самих логотипов -->
         <div
-            class="rounded-full aspect-square bg-no-repeat bg-center bg-contain bg-white"
+            class="rounded-full aspect-square bg-no-repeat bg-center bg-contain bg-white h-full"
             :style="'background-image: url(\'img/technologies/' + technology + '.svg\')'"
             :title="technology"
         />
