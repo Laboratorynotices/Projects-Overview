@@ -6,9 +6,11 @@
 </template>
 
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import ProjectsSection from './components/ProjectsSection.vue'
-import TechnologiesSection from './components/TechnologiesSection.vue'
+import HelloWorld from './components/HelloWorld.vue';
+import ProjectsSection from './components/ProjectsSection.vue';
+import TechnologiesSection from './components/TechnologiesSection.vue';
+
+document.title = 'Список проектов';
 
 const projects =
   [
@@ -30,7 +32,7 @@ const projects =
       description : 'Tropf-Tropf, Tropf, Tropf, Tropf-Tropf. Tropf.',
       technologies : ['yii2', 'html5'],
     },
-  ]
+  ];
 
 const technologies = projects.map(function (project) {
     // Вытягиваем массивы с технологиями из списка проектов.
@@ -60,7 +62,7 @@ const technologies = projects.map(function (project) {
     }
 
     // На выходе получается список технологий без повторений.
-  })
+  });
 
 
 </script>
