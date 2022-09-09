@@ -25,7 +25,7 @@
     <div :class="divClass" >
         <!-- Отображение самих логотипов -->
         <div
-            class="rounded-full aspect-square bg-no-repeat bg-center bg-contain bg-white h-full"
+            class="rounded-full aspect-square bg-no-repeat bg-center bg-contain bg-white dark:bg-gradient-to-br dark:from-blue-700 dark:to-blue-500 h-full"
             :style="'background-image: url(\'img/technologies/' + technology + '.svg\')'"
             :title="technology"
         />

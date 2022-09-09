@@ -10,7 +10,7 @@
 
 <template>
     <!-- Карточка для отображения проекта -->
-    <article class="my-2 rounded-3xl shadow-lg bg-white flex flex-col">
+    <article class="my-2 rounded-3xl shadow-lg bg-white dark:bg-gradient-to-br dark:from-blue-700 dark:to-blue-500 flex flex-col">
         <!-- Заголовок карточки -->
         <ProjectCardHeader :title="project.name" />
 

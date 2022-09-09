@@ -1,12 +1,16 @@
 <script setup>
+import ApplicationControlPanel from './components/ApplicationControlPanel.vue';
 import ApplicationHeader from './components/ApplicationHeader.vue';
 import ApplicationDescription from './components/ApplicationDescription.vue';
 import ApplicationFooter from './components/ApplicationFooter.vue';
 import ProjectsSection from './components/ProjectsSection.vue';
 import TechnologiesSection from './components/TechnologiesSection.vue';
 
+// Заголовок странички
 document.title = 'Список проектов';
 
+
+// Основные данные по проектам.
 const projects =
   [
     {
@@ -67,4 +71,5 @@ const technologies = projects.map(function (project) {
   <TechnologiesSection :technologies="technologies"/>
   <ProjectsSection :projects="projects" />
   <ApplicationFooter />
+  <ApplicationControlPanel />
 </template>
