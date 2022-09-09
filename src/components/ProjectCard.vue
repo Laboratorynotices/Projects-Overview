@@ -21,6 +21,7 @@
         <ProjectCardFooter
             :url="project.url"
             :technologies="project.technologies"
+            :gitHubUrl="project.gitHubUrl"
         />
     </article>
 </template>

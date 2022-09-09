@@ -2,6 +2,7 @@
     import TechnologyCard from '@/components/TechnologyCard.vue'
     defineProps({
         url: String,
+        gitHubUrl: String,
         technologies: Array 
     })
 </script>
@@ -12,7 +13,15 @@
             :href="url" target="_blank"
             class="rounded-full bg-blue-600 p-2 shadow text-white hover:bg-blue-700 dark:bg-blue-300 dark:hover:bg-blue-200"
         >
-            Open
+            Demo
+        </a>
+        <a
+            v-if="gitHubUrl"
+            :href="gitHubUrl"
+            target="_blank"
+            class="rounded-full bg-blue-600 p-2 shadow text-white hover:bg-blue-700 dark:bg-blue-300 dark:hover:bg-blue-200"
+        >
+            GitHub
         </a>
         <div class="h-full flex flex-row-reverse">
             <!-- Вызов данных по отдельности. -->
