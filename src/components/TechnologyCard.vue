@@ -17,6 +17,11 @@
             'w-6 first:mr-5')
     );
 
+    // Генерируем путь к файлу с лого технологией. При этом пробел заменяем на минус.
+    const technologyImagePath = computed(() =>
+        "img/technologies/" + props.technology.replace(" ", "-") + ".svg"
+    );
+
 </script>
 
 <template>
@@ -26,7 +31,7 @@
         <!-- Отображение самих логотипов -->
         <div
             class="rounded-full aspect-square bg-no-repeat bg-center bg-contain bg-white dark:bg-gradient-to-br dark:from-blue-700 dark:to-blue-500 h-full"
-            :style="'background-image: url(\'img/technologies/' + technology + '.svg\')'"
+            :style="'background-image: url(' + technologyImagePath + ')'"
             :title="technology"
         />
     </div>
